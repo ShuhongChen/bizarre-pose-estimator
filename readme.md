@@ -33,42 +33,41 @@ Make a copy of `./_env/machine_config.bashrc.template` to `./_env/machine_config
 
 This project requires docker with a GPU.  Run these lines from the project directory to pull the image and enter a container; note these are bash scripts inside the `./make` folder, not `make` commands.  Alternatively, you can build the docker image yourself.
 
-        make/docker_pull
-        make/shell_docker
-        # OR
-        make/docker_build
-        make/shell_docker
+    make/docker_pull
+    make/shell_docker
+    # OR
+    make/docker_build
+    make/shell_docker
 
 
 ## danbooru tagging
 
 The danbooru subset used to train the tagger and custom tag rulebook can be found under `./_data/danbooru/_filters`. Run this line to tag a sample image:
 
-        python3 -m _scripts.danbooru_tagger ./_samples/megumin.png
+    python3 -m _scripts.danbooru_tagger ./_samples/megumin.png
 
 
 ## character background segmentation
 
 Run this line to segment a sample image and extract the bounding box:
 
-        python3 -m _scripts.character_segmenter ./_samples/megumin.png
+    python3 -m _scripts.character_segmenter ./_samples/megumin.png
 
 
 ## pose estimation
 
 There are several models available in `./_train/character_pose_estim/runs`, corresponding to our models at the top of Table 1 in the paper. Run this line to estimate the pose of a sample image, using one of those models:
 
-        python3 -m _scripts.pose_estimator \
-            ./_samples/megumin.png \
-            ./_train/character_pose_estim/runs/feat_concat+data.ckpt
+    python3 -m _scripts.pose_estimator \
+        ./_samples/megumin.png \
+        ./_train/character_pose_estim/runs/feat_concat+data.ckpt
 
 
 ## pose-based retrieval
 
 Run this line to estimate the pose of a sample image, and get links to danbooru posts with similar poses:
 
-        python3 -m _scripts.pose_retrieval \
-            ./_samples/megumin.png
+    python3 -m _scripts.pose_retrieval ./_samples/megumin.png
 
 
 ## faq
