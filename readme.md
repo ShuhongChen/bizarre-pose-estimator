@@ -5,19 +5,20 @@
 ![](./_samples/retrieval_figure.png)
 
 **Transfer Learning for Pose Estimation of Illustrated Characters**  
-Shuhong Chen [\*](https://shuhongchen.github.io/), Matthias Zwicker [\*](https://www.cs.umd.edu/~zwicker/)  
+Shuhong Chen[\*](https://shuhongchen.github.io/), Matthias Zwicker[\*](https://www.cs.umd.edu/~zwicker/)  
 WACV2022  
 \[[arxiv](https://arxiv.org/abs/2108.01819)\]
 \[[video](https://www.youtube.com/watch?v=hOSjbRwfJrs)\]
 \[[poster](./wacv2022_poster.pdf)\]
-\[[github](https://github.com/ShuhongChen/bizarre-pose-estimator)\]
+\[[github](https://github.com/ShuhongChen/bizarre-pose-estimator)\]  
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/bizarre-pose-estimator)
 
 _Human pose information is a critical component in many downstream image processing tasks, such as activity recognition and motion tracking. Likewise, a pose estimator for the illustrated character domain would provide a valuable prior for assistive content creation tasks, such as reference pose retrieval and automatic character animation. But while modern data-driven techniques have substantially improved pose estimation performance on natural images, little work has been done for illustrations. In our work, we bridge this domain gap by efficiently transfer-learning from both domain-specific and task-specific source models. Additionally, we upgrade and expand an existing illustrated pose estimation dataset, and introduce two new datasets for classification and segmentation subtasks. We then apply the resultant state-of-the-art character pose estimator to solve the novel task of pose-guided illustration retrieval. All data, models, and code will be made publicly available._
 
-### Huggingface Spaces Web demo
+## web demo
 
-Integrated into [Huggingface Spaces 🤗](https://huggingface.co/spaces) using [Gradio](https://github.com/gradio-app/gradio). Try it out [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/bizarre-pose-estimator)
+Thanks to [AK391](https://github.com/AK391), integrated into [Huggingface Spaces 🤗](https://huggingface.co/spaces) using [Gradio](https://github.com/gradio-app/gradio). Try it out [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/bizarre-pose-estimator)
+
 
 ## download
 
@@ -72,6 +73,8 @@ There are several models available in `./_train/character_pose_estim/runs`, corr
 Run this line to estimate the pose of a sample image, and get links to danbooru posts with similar poses:
 
     python3 -m _scripts.pose_retrieval ./_samples/megumin.png
+
+By request, we also zipped the raw support set as `raw_retrieval_support.zip` in the drive downloads folder.  See [issue#4](https://github.com/ShuhongChen/bizarre-pose-estimator/issues/4) for more details.
 
 
 ## faq
