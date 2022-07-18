@@ -86,3 +86,16 @@ By request, we also zipped the raw support set as `raw_retrieval_support.zip` in
 * Which part is best? Part 4.
 
 
+## citing
+
+If you use our repo, please cite our work:
+
+    @inproceedings{chen2022bizarre,
+        title={Transfer Learning for Pose Estimation of Illustrated Characters},
+        author={Chen, Shuhong and Zwicker, Matthias},
+        booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+        year={2022}
+    }
+
+
+
